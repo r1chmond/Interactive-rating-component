@@ -1,0 +1,148 @@
+:root {
+  /*colors*/
+  --orange: hsl(25, 97%, 53%);
+  --grey-L: hsl(217, 12%, 63%);
+  --grey-M: hsl(216, 12%, 54%);
+  --Ldark-blue: hsl(213, 18%, 30%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --Vdark-blue: hsl(216, 12%, 8%);
+
+  /*font*/
+  --font-main: "overpass";
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+body {
+  color: white;
+  font-family: var(--font-main), sans-serif;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: var(--Vdark-blue);
+}
+@media (max-width: 375px) {
+  body {
+    padding: 0 20px;
+  }
+}
+
+.card {
+  background-image: linear-gradient(hsl(215, 23%, 29%), var(--dark-blue));
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 20px;
+}
+.icon-container {
+  margin-bottom: 20px;
+  background-color: var(--Ldark-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+h1 {
+  font-weight: 700;
+  font-size: 20px;
+}
+p {
+  color: var(--grey-L);
+  padding-top: 10px;
+}
+.rating-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+#rating1,
+#rating2,
+#rating3,
+#rating4,
+#rating5 {
+  background-color: var(--Ldark-blue);
+  color: var(--grey-M);
+  height: 45px;
+  width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 100ms;
+  cursor: pointer;
+}
+#rating1:hover,
+#rating2:hover,
+#rating3:hover,
+#rating4:hover,
+#rating5:hover {
+  background-color: var(--orange) !important;
+  color: white !important;
+}
+
+.submit-button {
+  background-color: var(--orange);
+  border: none;
+  min-width: 100%;
+  padding: 10px 0;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  color: white;
+  transition: 100ms;
+}
+
+.submit-button:hover {
+  color: var(--orange);
+  background-color: white;
+}
+
+/* additional second page style */
+.img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.chosen-rate {
+  background-color: var(--Ldark-blue);
+  color: var(--orange);
+  text-align: center;
+  padding: 5px 20px;
+  border-radius: 30px;
+  display: inline-block;
+  margin: 0 23% 20px 23%;
+}
+
+.thankyou {
+  text-align: center;
+}
+
+.thank-you-text {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.attribution {
+  margin-top: 100px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
